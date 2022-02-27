@@ -1,5 +1,0 @@
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'b20087@students.iitmandi.ac.in'
-EMAIL_HOST_USER = 'Ashutosh'
-EMAIL_HOST_PASSWORD = 'Ashutosh@IITMANDI'
-EMAIL_PORT = 587
