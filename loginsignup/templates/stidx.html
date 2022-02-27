@@ -17,8 +17,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/other.css" />
+    <link rel="stylesheet" href="{% static 'authp/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'authp/css/other.css'%}">
   </head>
   <body>
     <div class="wrapper d-flex align-items-stretch">
@@ -27,7 +27,7 @@
           <a
             href="#"
             class="img logo rounded-circle mb-5"
-            style="background-image: url(images/logo.jpg)"
+            style="background-image: url({% static 'images/logo.jpg'%})"
           ></a>
           <ul class="list-unstyled components mb-5">
             <li class="active">
