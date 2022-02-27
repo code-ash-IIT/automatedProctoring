@@ -1,5 +1,5 @@
-### Initializing project repo : "Jai Shree Ram"
-## By "BachPan ka pyar" fast forward
+### "Jai Shree Ram" : HacK36
+## By "BachPan ka pyar"
 Team members:
 1. Kishan Sharma
 2. Dev Haral
