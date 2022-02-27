@@ -7,10 +7,10 @@
     <title>Log-In Form</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="{% static 'authp/fonts/material-icon/css/material-design-iconic-font.min.css'%}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'authp/css/style.css'%}">
 </head>
 <body>
         <!-- Log in  Form -->
@@ -18,8 +18,8 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="./signup.html" class="signup-image-link">Create an account</a>
+                        <figure><img src="{% static 'authp/images/signin-image.jpg'%}" alt="sing up image"></figure>
+                        <a href="./signuph.html" class="signup-image-link">Create an account</a>
                     </div>
                     <div class="signin-form">
                         <h2 class="form-title">Log-In</h2>
