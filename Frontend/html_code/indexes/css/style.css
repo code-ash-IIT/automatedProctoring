@@ -119,6 +119,14 @@ strong {
 small {
   font-size: 80%; }
 
+
+.exam {
+  height: 500px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #549bed;
+}
+
 sub,
 sup {
   position: relative;
