@@ -1,0 +1,4 @@
+Run using django backend:
+1. Go to folder loginsignup using terminal
+2. Type "python manage.py runserver" in terminal to start web-app on port http://127.0.0.1:8000/ 
+3. Head to http://127.0.0.1:8000/ in any browser to see the app.
