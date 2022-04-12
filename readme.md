@@ -1,5 +1,5 @@
-### "Jai Shree Ram" : HacK36
-## By "BachPan ka pyar"
+## HacK36
+
 Team members:
 1. Kishan Sharma
 2. Dev Haral
