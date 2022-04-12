@@ -1,9 +1,10 @@
 ## HacK36
 
 Team members:
-1. Kishan Sharma
-2. Dev Haral
-3. Ashutosh Sharma
+1. Ashutosh Sharma
+2. Kishan Sharma
+3. Dev Haral
+
 
 
  <a href="https://git.io/typing-svg">
