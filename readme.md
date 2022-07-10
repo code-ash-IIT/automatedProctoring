@@ -1,9 +1,8 @@
-### Initializing project repo : "Jai Shree Ram"
-## By "BachPan ka pyar" fast forward
+## Hack36 Hackathon Project
 Team members:
-1. Kishan Sharma
+1. Ashutosh Sharma
 2. Dev Haral
-3. Ashutosh Sharma
+3. Kishan Sharma
 
 
  <a href="https://git.io/typing-svg">
@@ -75,6 +74,11 @@ Mentioned in requirements.txt
 1) Types of Exam Supported:
     - Subjective
     - Practical 
+
+# Demo
+<p align="center">
+  <img src="./gif.gif" alt="gameplay" />
+</p>
 
 ## Usage
 
