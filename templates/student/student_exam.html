@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block htmlhead%}
+<meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/other.css'%}" />
+{%endblock htmlhead%}
+{% block content %}
+
+<div class="wrapper d-flex align-items-stretch">
+  <div id="content" class="p-4 p-md-5">
+    <br><br><br><br>
+  <h1>Exam</h1>
+  <br><hr><br>
+  <!-- Display the exam questions and options here -->
+  <form method="POST" action="{% url 'exam_submission_confirmation' %}">
+    {% csrf_token %}
+    <!-- Include the exam_id as a hidden field to identify the exam -->
+    <input type="hidden" name="exam_id" value="{{ exam_id }}">
+
+    <!-- Display the questions and options dynamically from the text file -->
+    {% for question in questions %}
+      <p>{{ question.text }}</p>
+      {% for option in question.options.all %}
+        <input type="radio" id="option{{ option.of_question_id }}" name="question{{ question.question_id }}" value="{{ option.of_question_id }}">
+        <label for="option{{ option.of_question_id }}">{{ option.text }}</label><br>
+      {% endfor %}
+      <hr>
+    {% endfor %}
+
+    <button class="btn btn-primary btn-sm" type="submit">Submit Exam</button>
+    <br><br>
+  </form>
+  {% comment %} make this video container small {% endcomment %}
+  <div id="video-container" class="d-flex justify-content-center">
+    <video id="video-stream" autoplay></video>
+  </div>
+
+
+  <script>
+    // JavaScript code to start the video streaming
+    // This code uses the getUserMedia() function to access the webcam stream
+    // Make sure to add appropriate error handling and compatibility checks
+
+    // Get the video element
+    const video = document.getElementById('video-stream');
+
+    // Request camera access from the user
+  navigator.mediaDevices.getUserMedia({ video: true })
+  .then((stream) => {
+    // Set the video stream as the source for the video element
+    video.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error('Error accessing camera:', error);
+  });
+
+    // Create a WebSocket connection
+    const socket = new WebSocket('ws://' + window.location.host + '/ws/video_stream/');
+
+    // Event handler for successful WebSocket connection
+    socket.onopen = function(event) {
+      console.log('WebSocket connection established');
+      // Send a message to the server to start video streaming
+      socket.send(JSON.stringify({ command: 'start_video_stream' }));
+    };
+
+    // Event handler for receiving messages from the server
+    socket.onmessage = function(event) {
+      const message = JSON.parse(event.data);
+      if (message.command === 'video_frame') {
+        // Set the video stream as the source for the video element
+        video.src = 'data:image/jpeg;base64,' + message.data;
+      }
+    };
+
+    // Event handler for WebSocket errors
+    socket.onerror = function(event) {
+      console.error('WebSocket error:', event);
+    };
+
+    // Event handler for WebSocket connection closure
+    socket.onclose = function(event) {
+      console.log('WebSocket connection closed:', event);
+    };
+  </script>
+  </div>
+</div>
+{% endblock %}

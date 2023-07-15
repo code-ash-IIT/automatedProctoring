@@ -1,0 +1,88 @@
+┣ proctoring_project/
+┃ ┣ exam_files/
+┃ ┃ ┗ 1.txt
+┃ ┣ models/
+┃ ┃ ┗ shape_predictor_68_face_landmarks.dat
+┃ ┣ proctoring_project/
+┃ ┃ ┣ __pycache__/
+┃ ┃ ┃ ┣ __init__.cpython-37.pyc
+┃ ┃ ┃ ┣ settings.cpython-37.pyc
+┃ ┃ ┃ ┣ urls.cpython-37.pyc
+┃ ┃ ┃ ┗ wsgi.cpython-37.pyc
+┃ ┃ ┣ __init__.py
+┃ ┃ ┣ asgi.py
+┃ ┃ ┣ settings.py
+┃ ┃ ┣ urls.py
+┃ ┃ ┗ wsgi.py
+┃ ┣ professor/
+┃ ┃ ┣ __pycache__/
+┃ ┃ ┃ ┣ __init__.cpython-37.pyc
+┃ ┃ ┃ ┣ admin.cpython-37.pyc
+┃ ┃ ┃ ┣ apps.cpython-37.pyc
+┃ ┃ ┃ ┣ models.cpython-37.pyc
+┃ ┃ ┃ ┣ urls.cpython-37.pyc
+┃ ┃ ┃ ┗ views.cpython-37.pyc
+┃ ┃ ┣ migrations/
+┃ ┃ ┃ ┣ __pycache__/
+┃ ┃ ┃ ┃ ┣ 0001_initial.cpython-37.pyc
+┃ ┃ ┃ ┃ ┗ __init__.cpython-37.pyc
+┃ ┃ ┃ ┣ 0001_initial.py
+┃ ┃ ┃ ┗ __init__.py
+┃ ┃ ┣ __init__.py
+┃ ┃ ┣ admin.py
+┃ ┃ ┣ apps.py
+┃ ┃ ┣ models.py
+┃ ┃ ┣ tests.py
+┃ ┃ ┣ urls.py
+┃ ┃ ┗ views.py
+┃ ┣ student/
+┃ ┃ ┣ __pycache__/
+┃ ┃ ┃ ┣ __init__.cpython-37.pyc
+┃ ┃ ┃ ┣ admin.cpython-37.pyc
+┃ ┃ ┃ ┣ apps.cpython-37.pyc
+┃ ┃ ┃ ┣ models.cpython-37.pyc
+┃ ┃ ┃ ┣ urls.cpython-37.pyc
+┃ ┃ ┃ ┗ views.cpython-37.pyc
+┃ ┃ ┣ migrations/
+┃ ┃ ┃ ┣ __pycache__/
+┃ ┃ ┃ ┃ ┣ 0001_initial.cpython-37.pyc
+┃ ┃ ┃ ┃ ┣ 0002_exam_option_question.cpython-37.pyc
+┃ ┃ ┃ ┃ ┗ __init__.cpython-37.pyc
+┃ ┃ ┃ ┣ 0001_initial.py
+┃ ┃ ┃ ┣ 0002_exam_option_question.py
+┃ ┃ ┃ ┗ __init__.py
+┃ ┃ ┣ __init__.py
+┃ ┃ ┣ admin.py
+┃ ┃ ┣ apps.py
+┃ ┃ ┣ models.py
+┃ ┃ ┣ tests.py
+┃ ┃ ┣ urls.py
+┃ ┃ ┗ views.py
+┃ ┣ templates/
+┃ ┃ ┣ professor/
+┃ ┃ ┃ ┣ login.html
+┃ ┃ ┃ ┣ proctor.html
+┃ ┃ ┃ ┣ professor_home.html
+┃ ┃ ┃ ┗ signup.html
+┃ ┃ ┣ student/
+┃ ┃ ┃ ┣ login.html
+┃ ┃ ┃ ┣ signup.html
+┃ ┃ ┃ ┣ student_exam.html
+┃ ┃ ┃ ┗ student_home.html
+┃ ┃ ┣ add_exam.html
+┃ ┃ ┣ base.html
+┃ ┃ ┗ homepage.html
+┃ ┣ websocket_app/
+┃ ┃ ┣ migrations/
+┃ ┃ ┃ ┗ __init__.py
+┃ ┃ ┣ __init__.py
+┃ ┃ ┣ admin.py
+┃ ┃ ┣ apps.py
+┃ ┃ ┣ consumers.py
+┃ ┃ ┣ models.py
+┃ ┃ ┣ tests.py
+┃ ┃ ┗ views.py
+┃ ┣ db.sqlite3
+┃ ┣ filetree.txt
+┃ ┣ manage.py
+┃ ┗ routing.py

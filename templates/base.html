@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+      <title>Exam Hackers</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+    
+      <!-- Favicons -->
+      <link href="https://t4.ftcdn.net/jpg/03/34/40/37/360_F_334403790_2bxunpFUCfMNzqfFWxmS36XXMnY9SgrK.jpg" rel="icon">
+      
+      <link href="{% static 'hp/assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+    
+      <!-- Google Fonts -->
+      <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'%}" rel="stylesheet">
+    
+      <!-- Vendor CSS Files -->
+      <link href="{% static 'hp/assets/vendor/aos/aos.css'%}" rel="stylesheet">
+      <link href="{% static 'hp/assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+      <link href="{% static 'hp/assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+      <link href="{% static 'hp/assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+      <link href="{% static 'hp/assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+      <link href="{% static 'hp/assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+    
+      <!-- Template Main CSS File -->
+      <link href="{% static 'hp/assets/css/style.css'%}" rel="stylesheet">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+      <!-- =======================================================
+      * Template Name: Appland - v4.7.0
+      * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ======================================================== -->
+      {% block htmlhead %}
+{% endblock htmlhead %}
+    </head>
+<body>
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand" href="/"><span style="font-size:18px;"><center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wEt2nn.json"  background="transparent"  speed="2"  style="width: 80px; height: 60px;"  loop  autoplay></lottie-player>Exam Hacker's </center></span></a>
+      
+
+      <div class="logo">
+       
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'homepage' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+          
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+    <main>
+        {% block content %}
+        <!-- This block will be overridden by child templates -->
+        {% endblock %}
+    </main>
+    
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Exam Hackers</h3>
+            <p>
+              IIT Mandi <br>
+              Mandi ,HP<br>
+              India<br><br>
+              <strong>Phone:</strong> +917018459081<br>
+              <strong>Email:</strong> automatedproctoring@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Login</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sign Up</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contacts</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ's</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4> </h4>
+            
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Exam Hacker's</span></strong>. Developed by <strong>Ashutosh Sharma.</strong>
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</body>
+</html>

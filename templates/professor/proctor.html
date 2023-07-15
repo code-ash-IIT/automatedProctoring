@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br>
+<div class="d-flex justify-content-center">
+  <h1>Proctor Page</h1>
+  <br>
+  <!-- Add proctor-specific content here -->
+
+  <!-- Display the video stream -->
+  <div><br><br><br>
+    <h2>Live Students Video Stream</h2>
+    <div id="video-container">
+        <video id="video-stream" autoplay></video>
+  </div>
+
+  <!-- Display the captured photos -->
+  {% comment %} <div>
+    <h2>Captured Photos</h2>
+    <ul>
+      {% for photo in photos %}
+        <li><a href="{{ photo.url }}">{{ photo.filename }}</a></li>
+      {% empty %}
+        <li>No photos captured yet</li>
+      {% endfor %}
+    </ul>
+  </div> {% endcomment %}
+
+  <!-- Display other necessary information -->
+  <div>
+    <h2>Proctoring Information</h2>
+    {% comment %} <p>Face verification status: {% if face_verified %}Verified{% else %}Not Verified{% endif %}</p> {% endcomment %}
+    <p>Face verification status: Verified</p>
+    <!-- Add any additional proctoring information here -->
+  </div>
+
+  {% comment %} logout  {% endcomment %}
+  <div>
+    <a href="{% url 'logout' %}">Logout</a>
+  </div>
+  <br>
+  {% comment %} homepage of professor {% endcomment %}
+  <div>
+    <a href="{% url 'professor_home' %}">Professor Home</a>
+  </div>
+</div>
+  <script>
+    // Get the video element//////////////////////////////wrong
+    const video = document.getElementById('video-stream');
+
+    // Request camera access from the user
+  navigator.mediaDevices.getUserMedia({ video: true })
+  .then((stream) => {
+    // Set the video stream as the source for the video element
+    video.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error('Error accessing camera:', error);
+  });////////////////////////////////////////////wrong 
+        // JavaScript code to establish a WebSocket connection and receive the video stream
+
+        // Create a WebSocket connection
+        const socket = new WebSocket('ws://' + window.location.host + '/ws/video_stream/');
+
+        // Handle WebSocket connection opening
+        socket.onopen = function(event) {
+        console.log('WebSocket connection opened');
+        // Send the 'start_verification' message to start the face verification process
+        socket.send('start_verification');
+        };
+
+        // Handle WebSocket connection closing
+        socket.onclose = function(event) {
+        console.log('WebSocket connection closed');
+        // Send the 'stop_verification' message to stop the face verification process
+        socket.send('stop_verification');
+        };
+
+        // Handle received video stream from the WebSocket connection
+        socket.onmessage = function(event) {
+        // Get the video element
+        const video = document.getElementById('video-stream');
+
+        // Set the received video stream as the source for the video element
+        video.srcObject = event.data;
+        };
+    </script>
+{% endblock %}

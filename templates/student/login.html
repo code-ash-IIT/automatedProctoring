@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- Font Icon -->
+{%block htmlhead%}
+<link rel="stylesheet" href="{% static 'authp/fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+
+<!-- Main css -->
+<link rel="stylesheet" href="{% static 'authp/css/style.css'%}">
+{% endblock htmlhead%}
+{% block content %}
+<!-- Log in  Form -->
+<section class="sign-in">
+  <div class="container">
+      <div class="signin-content">
+          <div class="signin-image">
+              <figure><img src="{% static 'authp/images/signin-image.jpg'%}" alt="sing up image"></figure>
+              <a href="{% url 'student_signup' %}" class="signup-image-link">Create an account</a>
+          </div>
+          <div class="signin-form">
+              <h2 class="form-title">Log-In</h2>
+              {% if error %}
+              <p>{{ error }}</p>
+              {% endif %}
+              <form method="POST" class="register-form" id="login-form">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                      <input type="text" id="username" name="username" required placeholder="Email id"/>
+                  </div>
+                  <div class="form-group">
+                      <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                      <input type="password" id="password" name="password" required placeholder="Password"/>
+                  </div>
+                  <!-- <div class="form-group">
+                      <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                      <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                  </div> -->
+                  <div class="form-group form-button">
+                      <input type="submit" name="signin" id="signin" class="form-submit" value="Login"/>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- JS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+{% comment %} <h2>Professor Login</h2>
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+<form method="post">
+  {% csrf_token %}
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br><br>
+  <input type="submit" value="Login">
+</form> {% endcomment %}
+{% comment %} <p>Don't have an account? <a href="{% url 'professor_signup' %}">Sign up here</a>.</p> {% endcomment %}
+{% endblock %}
